@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sign up form Dribbble</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header Container -->
+        <h3 class="SignUp-tittle">Sign up to Dribbble</h3>
+        <div class="buttons">
+
+            <button class="btn-google">
+                <picture>
+                    <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" alt="logo-google">
+                </picture>
+                <span>Sign in with Google</span>
+            </button>
+
+            <button class="btn-twitter">
+                <picture>
+                    <img src="https://cdn-icons-png.flaticon.com/512/107/107195.png">
+                </picture>
+            </button>
+
+        </div>
+
+        <div class="separador">
+
+            <hr>
+                <span>Or</span>
+            <hr>
+
+        </div>
+
+        <!-- Form Container -->
+        <form action="" method="" class="form-container">
+            
+            <div class="name-user">
+                <label for="name">
+                    <span>Name</span>
+                    <input type="text" id="name" name="name" required autocomplete="off">
+                    <small class="error__messages"></small>
+                </label>
+                <label for="username">
+                    <span>Username</span>
+                    <input type="text" id="username" name="username" required autocomplete="off">
+                    <small class="error__messages"></small>
+                </label>
+            </div>
+
+            <label for="email">
+                <span>Email</span>
+                <input type="email" id="email" name="email" required autocomplete="off">
+                <small class="error__messages"></small>
+            </label>
+            
+            <label for="password">
+                <span>Password</span>
+                <input type="password" id="password" name="password" placeholder="6+ characters" required autocomplete="off">
+                <small class="error__messages"></small>
+            </label>
+            
+            <label for="checkbox">
+                <input type="checkbox" id="checkbox" required>
+                <small>Terms and Condition</small>
+            </label>
+            
+            <button type="submit">Create Account</button>
+
+        </form>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

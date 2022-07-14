@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+:root{
+    --error-color:#dc3545;
+    --success-color:#28a745;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 5px;
+    /* align-items: center; */
+    width: 345px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 10px #ccc;
+    justify-content: center;
+    gap: 15px;
+}
+
+.buttons{
+    align-self: flex-start;
+    display: flex;
+    gap: 20px;
+
+}
+
+.btn-google{
+    display: flex;
+    align-items: center;
+    background-color: rgb(26,115,232);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    padding: 2px;
+}
+
+.btn-twitter{
+    width: 40px;
+    height: 40px;
+    color: #bbb;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-twitter:hover{
+    background-color: #ddd;
+}
+
+.btn-google:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
+.btn-google span{
+    color: white;
+    font-weight: 300;
+    padding: 15px;
+}
+
+.btn-google picture{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-google picture img,
+.btn-twitter picture img{
+    width: 60%;
+}
+
+.separador{
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+hr{
+    width: 100%; 
+    border: .1px solid #ccc;
+}
+
+.name-user{
+    display: flex;
+    gap: 18px;
+} 
+
+label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+
+label span{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input{
+    border: 1px solid #ccc;
+    background-color: #ddd;
+    outline: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+input.error{
+    border: 1px solid var(--error-color);
+}
+
+.error__messages{
+    color: var(--error-color);
+}
+
+input.success{
+    border: 1px solid var(--success-color);
+}
+
+label input:focus,
+label input:hover{
+    box-shadow: 1px 1px 10px #F6B6CF;
+    background-color: white;
+}
+
+label input:focus{
+    border: 1px solid #f6b6cf;
+}
+
+input[type="text"]{
+    width: 120px;
+}
+
+label[for="checkbox"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+label[for="checkbox"] span{
+    margin: 0;
+}
+
+label[for="checkbox"]:checked{
+    background: #4F3CC9;
+}
+
+button[type="submit"]{
+    width: 100%;
+    background-color: #fc92bb;
+    border-radius: 5px;
+    border:none;
+    color: white;
+    height: 40px;
+}
+
+button[type="submit"]:hover{
+    cursor: no-drop;
+}
+
+.info{
+    opacity: 0;
+    text-align: center;
+    border: 1px solid red;
+    margin-bottom: 1rem;
+}
+
+.active{
+    opacity: 1;
+}

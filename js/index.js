@@ -1,5 +1,8 @@
+
+
+
 //Values
-const $form = document.querySelector(".form-container");
+const $form = document.querySelector(".form-container"); 
 const $inputs = document.querySelectorAll(".form-container [required]");
 
 let checkName,
@@ -78,7 +81,7 @@ const passwordValidation = password =>{
         borderPaintInput(password);
         setError(password);
         checkPassword = true;
-        account.password = password.value.trim()
+        account.password = "hashEncripte(password)"
      }
 };
 
@@ -133,5 +136,18 @@ $inputs.forEach( input =>{
     });
 });
 
+$form.addEventListener("submit", e =>{
+    let validations = checkName && checkUsername && checkEmail && checkPassword;
+    e.preventDefault();
 
+    if(validations){
+        console.log(JSON.stringify(account));
+        console.log(Swal.fire(
+            'You are registred succefully!',
+            'You clicked the button!',
+            'success'
+          ));
+    }
+    
+});
 

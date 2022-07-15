@@ -178,7 +178,7 @@ button[type="submit"]{
 }
 
 button[type="submit"]:hover{
-    cursor: no-drop;
+    cursor: pointer;
 }
 
 .info{

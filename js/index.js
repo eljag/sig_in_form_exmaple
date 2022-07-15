@@ -68,9 +68,18 @@ const emailValidation = email => {
     }
 }
 
-const isPasswordSecure = password =>{
+const passwordValidation = password =>{
     const regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-    return regex.test(password.value);
+     if(!regex.test(password.value.trim())){
+        borderPaintInput(password, false);
+        setError(password, "The specifications for password is not corrects");
+        checkPassword = false;
+     }else{
+        borderPaintInput(password);
+        setError(password);
+        checkPassword = true;
+        account.password = password.value.trim()
+     }
 };
 
 function clearHTML(element){
@@ -96,6 +105,10 @@ function getInputName(element){
     if(element.name === "email")
         emailValidation(element);
 
+    if(element.name === "password"){
+        passwordValidation(element);
+    }
+
 }
 
 //Events
@@ -116,8 +129,6 @@ $inputs.forEach( input =>{
         }else{
             getInputName(e.target);
         }
-
-       
         
     });
 });

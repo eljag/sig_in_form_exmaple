@@ -102,18 +102,7 @@ function getInputName(element){
 
 document.addEventListener("keyup", e =>{
     if(e.target.matches(".form-container [required]")){
-
-        // if(e.target.name === "name") 
-        //     nameValidation(e.target);
-        
-        // if(e.target.name === "username")
-        //     userNameValidation(e.target);
-        
-        // if(e.target.name === "email")
-        //     emailValidation(e.target);
-
         getInputName(e.target);
-        
     }
 })
 
@@ -125,17 +114,6 @@ $inputs.forEach( input =>{
             borderPaintInput(input, false);
             setError(input, "This field is required");
         }else{
-            // input.classList.remove("error");
-            // input.classList.add("success");
-            // setError(input);
-            // if(e.target.name === "name")
-            //     nameValidation(e.target);
-
-            // if(e.target.name === "username")
-            //     userNameValidation(e.target);
-
-            // if(e.target.name === "email")
-            //     emailValidation(e.target);
             getInputName(e.target);
         }
 

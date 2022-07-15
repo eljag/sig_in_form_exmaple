@@ -28,7 +28,7 @@ const borderPaintInput = (element, result = true) =>{
 const nameValidation = (element) =>{
 
     if(!isBetween(element.value.trim().length, 3, 16)){
-        borderPaintInput(element, false)
+        borderPaintInput(element, false);
         setError(element, "Between 3 and 16 char");
         checkName = false;
     }else{
@@ -85,43 +85,61 @@ function setError(elements, message = ""){
     $smallElement.innerText = message;
 }
 
+function getInputName(element){
+
+    if(element.name === "name")
+        nameValidation(element);
+
+    if(element.name === "username")
+        userNameValidation(element);
+
+    if(element.name === "email")
+        emailValidation(element);
+
+}
+
 //Events
 
 document.addEventListener("keyup", e =>{
     if(e.target.matches(".form-container [required]")){
 
-        if(e.target.name === "name") 
-            nameValidation(e.target);
+        // if(e.target.name === "name") 
+        //     nameValidation(e.target);
         
-        if(e.target.name === "username")
-            userNameValidation(e.target);
+        // if(e.target.name === "username")
+        //     userNameValidation(e.target);
         
-        if(e.target.name === "email")
-            emailValidation(e.target);
+        // if(e.target.name === "email")
+        //     emailValidation(e.target);
+
+        getInputName(e.target);
         
     }
 })
 
 $inputs.forEach( input =>{
+
     input.addEventListener("blur", e => {
+
         if(!isRequired(e.target.value)){
-            input.classList.remove("success");
-            input.classList.add("error"); 
+            borderPaintInput(input, false);
             setError(input, "This field is required");
         }else{
-            input.classList.remove("error");
-            input.classList.add("success");
-            setError(input);
+            // input.classList.remove("error");
+            // input.classList.add("success");
+            // setError(input);
+            // if(e.target.name === "name")
+            //     nameValidation(e.target);
+
+            // if(e.target.name === "username")
+            //     userNameValidation(e.target);
+
+            // if(e.target.name === "email")
+            //     emailValidation(e.target);
+            getInputName(e.target);
         }
 
-        if(e.target.name === "name")
-            nameValidation(e.target);
-
-        if(e.target.name === "username")
-            userNameValidation(e.target);
-
-        if(e.target.name === "email")
-            emailValidation(e.target);
+       
         
     });
 });

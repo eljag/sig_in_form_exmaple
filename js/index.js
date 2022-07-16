@@ -32,7 +32,7 @@ const nameValidation = (element) =>{
 
     if(!isBetween(element.value.trim().length, 3, 16)){
         borderPaintInput(element, false);
-        setError(element, "Between 3 and 16 char");
+        setError(element, "Between 3 - 16 characters");
         checkName = false;
     }else{
         borderPaintInput(element);
@@ -46,7 +46,7 @@ const userNameValidation = (userName) =>{
     const regex = /^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
      if(!regex.test(userName.value.trim())){
         borderPaintInput(userName, false);
-        setError(userName, "The field user name contains param");
+        setError(userName, "Between 8 - 20 characters");
         checkUsername = false;
      }else{
         borderPaintInput(userName);
@@ -75,7 +75,7 @@ const passwordValidation = password =>{
     const regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
      if(!regex.test(password.value.trim())){
         borderPaintInput(password, false);
-        setError(password, "The specifications for password is not corrects");
+        setError(password, "The password character should have almost one uppercase, special characters, number and min 8 characters.");
         checkPassword = false;
      }else{
         borderPaintInput(password);
@@ -113,6 +113,11 @@ function getInputName(element){
     }
 
 }
+
+function showObject(obj){
+
+}
+
 
 //Events
 

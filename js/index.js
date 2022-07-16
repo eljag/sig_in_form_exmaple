@@ -144,9 +144,14 @@ $form.addEventListener("submit", e =>{
         console.log(JSON.stringify(account));
         console.log(Swal.fire(
             'You are registred succefully!',
-            'You clicked the button!',
+            `Username: ${account.username}\n
+             email: ${account.email}`,
             'success'
           ));
+
+          setTimeout(()=>{
+            window.location.href = "./pages/login.html";
+          }, 3000);
     }
     
 });

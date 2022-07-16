@@ -14,7 +14,7 @@ body{
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    color: #ccc;
+    color: white;
 }
 
 .container{
@@ -22,7 +22,7 @@ body{
     flex-direction: column;
     padding: 2rem;
     border-radius: 5px;
-    /* align-items: center; */
+    background-color: rgb(27, 27, 27);
     width: 345px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 10px #ccc;
@@ -120,7 +120,8 @@ label span{
 
 input{
     border: 1px solid #ccc;
-    background-color: #ddd;
+    background-color: black;
+    color: white;
     outline: none;
     padding: 8px 20px;
     border-radius: 5px;
@@ -131,6 +132,7 @@ input.error{
 }
 
 .error__messages{
+    margin-top: 5px;
     color: var(--error-color);
 }
 
@@ -141,7 +143,7 @@ input.success{
 label input:focus,
 label input:hover{
     box-shadow: 1px 1px 10px #F6B6CF;
-    background-color: white;
+    
 }
 
 label input:focus{
@@ -181,13 +183,3 @@ button[type="submit"]:hover{
     cursor: pointer;
 }
 
-.info{
-    opacity: 0;
-    text-align: center;
-    border: 1px solid red;
-    margin-bottom: 1rem;
-}
-
-.active{
-    opacity: 1;
-}

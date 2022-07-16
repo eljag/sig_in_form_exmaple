@@ -154,9 +154,6 @@ $form.addEventListener("submit", e =>{
             'success'
           );
 
-          setTimeout(()=>{
-            window.location.href = "./pages/login.html";
-          }, 3000);
     }
     
 });

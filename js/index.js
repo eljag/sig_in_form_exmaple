@@ -1,6 +1,3 @@
-
-
-
 //Values
 const $form = document.querySelector(".form-container"); 
 const $inputs = document.querySelectorAll(".form-container [required]");
@@ -113,11 +110,6 @@ function getInputName(element){
     }
 
 }
-
-function showObject(obj){
-
-}
-
 
 //Events
 
